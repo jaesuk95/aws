@@ -6,4 +6,6 @@ urlpatterns = [
     path('menus/<int:shop>', views.menu, name="menus"),
     # int:shop 이라는 것은 여기서 shop 이 views.py 에 shop parameter 를 불러온다. 
     path('order/',views.order, name="order")
+
+
 ]

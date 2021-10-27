@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-zm6y35616re08ghe*b+fyi9l1un^!zz)*4**6it#t^zss9rs)l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-15-164-233-63.ap-northeast-2.compute.amazonaws.com',
-                 'elbtest-1780095821.ap-northeast-2.elb.amazonaws.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -40,6 +39,7 @@ INSTALLED_APPS = [
     'order',
     'rest_framework',
     'boss',
+    'user',
     'delivery'
 ]
 
@@ -79,15 +79,8 @@ WSGI_APPLICATION = 'fastcampus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'project1',
-        'USER': 'admin',
-        'PASSWORD':'123456789',
-        'HOST':'database-2.cnzeadipo1m3.ap-northeast-2.rds.amazonaws.com',
-        'PORT':'3306',
-        'OPTIONS':{
-            'init_command' : "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
     }
 }
 

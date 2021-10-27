@@ -31,7 +31,9 @@ def shop(request):
 
         data = JSONParser().parse(request)
         # 데이터에서 JSONParser (JSONParser is the base class to define public API for reading JSON content. It is the most efficient way for reading JSON data.)
+        # parse, is defined as the processing of a piece of python program and converting these codes into machine language.
         # 어떤 데이터를 추가 할 것인지 JSON 형태 나와있기 때문에 그것을 Parsing 한 다음에 
+
 
         serializer = ShopSerializer(data=data)
         # 데이터 형식을 JSON 으로 바꿔준다 
